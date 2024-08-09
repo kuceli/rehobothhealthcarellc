@@ -5,9 +5,16 @@ import Footer from "../components/Footer";
 
 const LandingPage = () => {
   return (
-    <div>
-      <Header />
-      <Hero />
+    <div className="">
+      <div className="h-screen w-screen">
+        <div className="h-[7.5%]">
+          <Header />
+        </div>
+        <div className="h-[92.5%]">
+          {" "}
+          <Hero />
+        </div>
+      </div>
       <Footer />
     </div>
   );
