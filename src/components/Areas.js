@@ -4,7 +4,7 @@ const Areas = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[45.2rem] items-center justify-center flex w-full text-white bg-dark-blue"
+      className="h-[45.2rem] items-center justify-center flex w-full text-white bg-white"
     >
       Areas
     </div>

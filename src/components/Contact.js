@@ -2,20 +2,28 @@ import React, { forwardRef } from "react";
 import Input from "./Input";
 import Button from "./Button";
 import TextArea from "./TextArea";
+import Heading from "./Heading";
 
 const Contact = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[45.3rem] px-36 py-10 items-center flex flex-col w-full text-dark-blue "
+      className="h-[45.3rem] px-36 py-10 items-center flex flex-col w-full text-dark-blue bg-dark-blue"
     >
       <div className="h-[10%] w-[20%] flex flex-col items-center gap-3 mb-14  ">
-        <p className="uppercase font-semibold text-3xl">Contact Us</p>
-        <div className="bg-green w-[50%] h-[3px]"></div>
+        <p className="uppercase font-semibold text-3xl text-white">
+          Contact Us
+        </p>
+        <div className="bg-green w-[40%] h-[3px]"></div>
       </div>
-      <div className="flex items-center h-[80%] justify-center w-full gap-6 ">
-        <div className="h-full w-[40%] bg-white">Left</div>
-        <div className="h-full w-[40%] flex flex-col justify-center items-center gap-7 rounded-lg px-5 bg-white  ">
+      <div className="flex items-center h-[80%] justify-center w-full gap-x-20 text-justify ">
+        <div className="h-full w-[40%] text-white">
+          <p>
+            Have questions or need help? Use this form to reach out to us. A
+            team member will be in touch with you as quickly as possible.
+          </p>
+        </div>
+        <div className="h-full w-[40%] flex flex-col justify-center items-center gap-7 rounded-lg px-6 bg-white   ">
           <Input placeholder={"John Doe"} props={"Full Name"} />
           <Input placeholder={"johndoe@gmail.com"} props={"Email Address"} />
           <TextArea placeholder={"Your message here..."} props={"Message"} />

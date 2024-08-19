@@ -33,12 +33,48 @@ const LandingPage = () => {
     return () => window.removeEventListener("scroll", scrollHandler);
   }, [top]);
 
+  useEffect(() => {
+    const sections = [
+      { ref: home, name: "home" },
+      { ref: about, name: "about" },
+      { ref: services, name: "services" },
+      { ref: areas, name: "areas" },
+      { ref: contact, name: "contact" },
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.dataset.section);
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust the threshold value to fine-tune when a section is considered "in view"
+    );
+
+    sections.forEach((section) => {
+      if (section.ref.current) {
+        observer.observe(section.ref.current);
+        section.ref.current.dataset.section = section.name;
+      }
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section.ref.current) {
+          observer.unobserve(section.ref.current);
+        }
+      });
+    };
+  }, []);
+
   return (
     <div className="w-screen font-[montserrat] overflow-x-hidden">
       <div className="h-screen w-full">
         <div
-          className={`h-[56px] fixed left-0 top-0 right-0 z-20 bg-[#eef6fe] ${
-            !top && `bg-[#eef6fe] shadow`
+          className={`h-[56px] fixed left-0 top-0 right-0 z-20 bg-white ${
+            !top && `bg-white shadow`
           }`}
         >
           <div className="flex justify-between px-14 items-center py-2 text-sm font-semibold text-dark-blue">
