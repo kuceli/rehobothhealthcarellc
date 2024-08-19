@@ -77,7 +77,7 @@ const LandingPage = () => {
             !top && `bg-white shadow`
           }`}
         >
-          <div className="flex justify-between px-14 items-center py-2 text-sm font-semibold text-dark-blue">
+          <div className="flex justify-between px-14 items-center py-2 text-sm font-semibold text-dark-blue hover:text-light-blue">
             <img
               src={Logo3}
               className="h-11 cursor-pointer"
@@ -87,49 +87,15 @@ const LandingPage = () => {
             <ul className="flex gap-9 cursor-pointer">
               <li
                 onClick={() => scrollToSection(home, "home")}
-                className="hover:text-light-blue"
+                className={activeSection === "home" ? "text-green" : ""}
               >
-                <span
-                  className={
-                    activeSection === "home"
-                      ? "text-light-blue"
-                      : "text-dark-blue"
-                  }
-                >
-                  {" "}
-                  Home
-                </span>
-
-                <div
-                  className={
-                    activeSection === "home"
-                      ? "w-[70%] h-[2px] bg-green m-auto"
-                      : "hidden "
-                  }
-                ></div>
+                Home
               </li>
               <li
                 onClick={() => scrollToSection(about, "about")}
-                className="hover:text-light-blue"
+                className={activeSection === "about" ? "text-green" : ""}
               >
-                <span
-                  className={
-                    activeSection === "about"
-                      ? "text-light-blue"
-                      : "text-dark-blue"
-                  }
-                >
-                  {" "}
-                  About Us
-                </span>
-
-                <div
-                  className={
-                    activeSection === "about"
-                      ? "w-[70%] h-[2px] bg-green m-auto"
-                      : "hidden "
-                  }
-                ></div>
+                About Us
               </li>
 
               <li

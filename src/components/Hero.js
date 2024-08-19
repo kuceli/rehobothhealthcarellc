@@ -1,6 +1,4 @@
 import React, { forwardRef } from "react";
-import HeroImg from "../assets/Hero-Img.png";
-import Button from "./Button";
 const Hero = forwardRef((props, ref) => {
   return (
     <div
@@ -8,12 +6,19 @@ const Hero = forwardRef((props, ref) => {
       ref={ref}
     >
       <div class="col-start-1 row-start-1 bg-gray-800 bg-opacity-70 w-full h-full"></div>
-      <div className="w-[50%] h-full flex flex-col justify-center leading-10 gap-7 col-start-1 row-start-1 pl-14 ">
-        <p className="uppercase font-semibold text-6xl text-white ">
-          We are here <br />
-          <span className="font-bold text-8xl">for your health.</span>
-        </p>
-        <div className="w-[24%]">
+      <div className="w-[50%] h-full flex flex-col justify-center text-white  gap-7 col-start-1 row-start-1 pl-14 ">
+        <div>
+          <p className="uppercase font-semibold text-6xl leading-10  ">
+            We are here <br />
+            <span className="font-bold text-8xl">for your health.</span>
+          </p>
+          <p className="w-[70%] text-justify text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
+            ad minim nostrud eiusmod tempor incididunt ut labore et dolore magna
+          </p>
+        </div>
+        <div className="w-[23.95%]">
           <div class="mx-auto flex items-center justify-center">
             <div class="relative z-10 flex w-full cursor-pointer items-center overflow-hidden p-[2.5px]">
               <div class="animate-rotate absolute inset-0 h-full w-full bg-[conic-gradient(#fff_20deg,transparent_120deg)]"></div>
