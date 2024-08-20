@@ -6,10 +6,10 @@ const Services = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[45.3rem] py-14  items-center flex flex-col w-full text-dark-blue bg-alt-light-blue"
+      className="h-[45.2rem] py-10  items-center flex flex-col w-full text-dark-blue bg-alt-light-blue"
     >
       <Heading text="Our Services" />
-      <div className="flex gap-7 w-full  px-32 justify-between h-full">
+      <div className="flex gap-7 w-full  px-32 justify-between h-[87%]">
         <div className="w-[50%] flex flex-col items-center">
           <div className="border border-solid border-red-500 w-[30%] h-[30%] rounded-full mb-6"></div>
           <p className="text-lg">

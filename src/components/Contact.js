@@ -8,7 +8,7 @@ const Contact = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[45.3rem] px-36 py-10 items-center flex flex-col w-full text-dark-blue bg-dark-blue"
+      className="h-[45.2rem] px-36 py-10 items-center flex flex-col w-full text-dark-blue bg-dark-blue"
     >
       <div className="h-[10%] w-[20%] flex flex-col items-center gap-3 mb-14  ">
         <p className="uppercase font-semibold text-3xl text-white">

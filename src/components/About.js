@@ -11,10 +11,10 @@ const About = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[45.3rem] pt-10 items-center justify-center flex flex-col w-full text-dark-blue bg-white "
+      className="h-[45.2rem] pt-10 items-center justify-center flex flex-col w-full text-dark-blue bg-white "
     >
       <Heading text="About Us" />
-      <div className="flex flex-col h-[90%] w-full  justify-between">
+      <div className="flex flex-col h-[87%] w-full  justify-between">
         <div className="h-[75%] flex  gap-8 px-56">
           <div className=" h-full w-[50%] flex gap-4 ">
             <div className="w-[50%] h-[90%] flex flex-col items-end gap-4">
@@ -49,21 +49,21 @@ const About = forwardRef((props, ref) => {
           </div>
         </div>
         <div className="h-[25%] bg-dark-blue text-white flex items-center justify-center mt-7 gap-12 w-full py-5 px-56">
-          <div className="w-[30%] h-full  flex flex-col items-center justify-center">
+          <div className="w-[30%] h-full  flex flex-col items-center justify-center transform transition duration-1000 hover:scale-105">
             <img src={Satisfaction} className="h-[45%]" />
             <p className="font-semibold">Professional Nurses</p>
             <p className="text-sm text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             </p>
           </div>
-          <div className="w-[30%] h-full  flex flex-col items-center justify-center">
+          <div className="w-[30%] h-full  flex flex-col items-center justify-center transform transition duration-1000 hover:scale-105">
             <img src={Nurse} className="h-[45%]" />
             <p className="font-semibold">Professional Nurses</p>
             <p className="text-sm text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             </p>
           </div>
-          <div className="w-[30%] h-full  flex flex-col items-center justify-center">
+          <div className="w-[30%] h-full  flex flex-col items-center justify-center transform transition duration-1000 hover:scale-105">
             <img src={Cash} className="h-[45%]" />
             <p className="font-semibold">Professional Nurses</p>
             <p className="text-sm text-center">
