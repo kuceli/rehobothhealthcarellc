@@ -1,8 +1,6 @@
 import React, { forwardRef } from "react";
 import Input from "./Input";
-import Button from "./Button";
 import TextArea from "./TextArea";
-import Heading from "./Heading";
 
 const Contact = forwardRef((props, ref) => {
   return (

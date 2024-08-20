@@ -10,7 +10,9 @@ const Hero = forwardRef((props, ref) => {
         <div>
           <p className="uppercase font-semibold text-6xl leading-10  ">
             We are here <br />
-            <span className="font-bold text-8xl">for your health.</span>
+            <span className="font-bold text-8xl text-alt-light-blue">
+              for your health.
+            </span>
           </p>
           <p className="w-[70%] text-justify text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

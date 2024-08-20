@@ -1,23 +1,71 @@
 import React, { forwardRef } from "react";
 import AreasImg from "../assets/areas.png";
+import { MdOutlineRadioButtonChecked } from "react-icons/md";
 
 const Areas = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[45.2rem] items-center justify-center flex w-full text-white bg-white"
+      className="h-[45.2rem] items-center justify-center flex w-full text-white bg-white "
     >
-      <div className="border border-solid border-red-500 w-full h-[60%] flex text-dark-blue absolute justify-between px-36">
-        <div>
-          <div className="w-[100%] flex flex-col items-center gap-3 mb-14 mt-10 border border-solid border-green">
-            <p className="uppercase font-semibold text-3xl text-dark-blue">
+      <div className=" w-full h-[60%] flex absolute justify-between pl-36 pr-40 bg-[url('assets/areasBg.jpg')] bg-cover bg-center bg-no-repeat relative">
+        <div className="absolute inset-0 bg-gray-800 bg-opacity-85 z-10"></div>
+        <div className="z-20  w-[60%]">
+          <div className="w-full flex flex-col gap-3 mt-10 ">
+            <p className="uppercase font-semibold text-3xl text-white">
               Areas We Serve
             </p>
-            <div className="bg-green w-[40%] h-[3px]"></div>
+            <div className="bg-green w-[15%] h-[3px]"></div>
+          </div>
+
+          <div className="w-[60%] pb-10 pt-5 h-[70%] ">
+            <p className="text-sm pb-5">
+              lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+              lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+            </p>
+
+            <div className="flex gap-10">
+              <div className="flex flex-col gap-1">
+                <p className="flex items-center gap-3 text-green">
+                  <MdOutlineRadioButtonChecked />{" "}
+                  <span className="text-white">Anne Arundel </span>
+                </p>
+                <p className="flex items-center gap-3 text-green">
+                  <MdOutlineRadioButtonChecked />{" "}
+                  <span className="text-white">Baltimore</span>
+                </p>
+                <p className="flex items-center gap-3 text-green">
+                  <MdOutlineRadioButtonChecked />{" "}
+                  <span className="text-white">Prince - Georges</span>
+                </p>
+                <p className="flex items-center gap-3 text-green">
+                  <MdOutlineRadioButtonChecked />
+                  <span className="text-white">Montgomery</span>
+                </p>
+              </div>
+              <div className="flex flex-col gap-1">
+                {" "}
+                <p className="flex items-center gap-3 text-green">
+                  <MdOutlineRadioButtonChecked />{" "}
+                  <span className="text-white">Howard</span>
+                </p>
+                <p className="flex items-center gap-3 text-green">
+                  <MdOutlineRadioButtonChecked />{" "}
+                  <span className="text-white">Harford</span>
+                </p>
+                <p className="flex items-center gap-3 text-green">
+                  <MdOutlineRadioButtonChecked />{" "}
+                  <span className="text-white">Carroll</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="border border-solid border-green h-[114%] relative top-[-7%] w-[40%] rounded-lg">
-          <img src={AreasImg} className="h-full w-full object-cover" />
+        <div className="z-20 w-[40%]">
+          <img
+            src={AreasImg}
+            className="h-full w-full object-cover -rotate-45 "
+          />
         </div>
       </div>
     </div>
