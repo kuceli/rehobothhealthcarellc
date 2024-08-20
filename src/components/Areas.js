@@ -1,5 +1,6 @@
 import React, { forwardRef } from "react";
 import AreasImg from "../assets/areas.png";
+import Areas2 from "../assets/areas2.jpg";
 import { MdOutlineRadioButtonChecked } from "react-icons/md";
 
 const Areas = forwardRef((props, ref) => {
@@ -10,8 +11,8 @@ const Areas = forwardRef((props, ref) => {
     >
       <div className=" w-full h-[60%] flex absolute justify-between pl-36 pr-40 bg-[url('assets/areasBg.jpg')] bg-cover bg-center bg-no-repeat relative">
         <div className="absolute inset-0 bg-gray-800 bg-opacity-85 z-10"></div>
-        <div className="z-20  w-[60%]">
-          <div className="w-full flex flex-col gap-3 mt-10 ">
+        <div className="z-10  w-[60%] ">
+          <div className="w-full flex flex-col gap-3 mt-20 ">
             <p className="uppercase font-semibold text-3xl text-white">
               Areas We Serve
             </p>
@@ -61,11 +62,12 @@ const Areas = forwardRef((props, ref) => {
             </div>
           </div>
         </div>
-        <div className="z-20 w-[40%]">
-          <img
+        <div className="z-10 w-[40%] relative top-[-10%]">
+          {/* <img
             src={AreasImg}
             className="h-full w-full object-cover -rotate-45 "
-          />
+          /> */}
+          <img src={Areas2} className="h-[120%] w-full object-cover" />
         </div>
       </div>
     </div>
