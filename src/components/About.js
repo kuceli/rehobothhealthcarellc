@@ -2,17 +2,20 @@ import React, { forwardRef } from "react";
 import About1 from "../assets/about1.jpg";
 import About2 from "../assets/about2.jpg";
 import About3 from "../assets/about3.jpg";
+import Satisfaction from "../assets/satisfaction.png";
+import Nurse from "../assets/nurse.png";
+import Cash from "../assets/cash.png";
 import Heading from "./Heading";
 
 const About = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[45.3rem] pt-14  items-center justify-center flex flex-col w-full text-dark-blue bg-white  "
+      className="h-[45.3rem] pt-10 items-center justify-center flex flex-col w-full text-dark-blue bg-white "
     >
       <Heading text="About Us" />
-      <div className="flex flex-col h-full w-full">
-        <div className="h-[70%] flex  gap-8 px-56">
+      <div className="flex flex-col h-[90%] w-full  justify-between">
+        <div className="h-[75%] flex  gap-8 px-56">
           <div className=" h-full w-[50%] flex gap-4 ">
             <div className="w-[50%] h-[90%] flex flex-col items-end gap-4">
               <div className="h-[50%] w-full  ">
@@ -45,15 +48,27 @@ const About = forwardRef((props, ref) => {
             </div>
           </div>
         </div>
-        <div className="h-[25%] bg-dark-blue text-white flex items-center justify-center mt-7 gap-7 w-full py-3 px-56">
-          <div className="w-[30%] h-full border border-solid border-white">
-            left
+        <div className="h-[25%] bg-dark-blue text-white flex items-center justify-center mt-7 gap-12 w-full py-5 px-56">
+          <div className="w-[30%] h-full  flex flex-col items-center justify-center">
+            <img src={Satisfaction} className="h-[45%]" />
+            <p className="font-semibold">Professional Nurses</p>
+            <p className="text-sm text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            </p>
           </div>
-          <div className="w-[30%]  h-full  border border-solid border-white">
-            middle
+          <div className="w-[30%] h-full  flex flex-col items-center justify-center">
+            <img src={Nurse} className="h-[45%]" />
+            <p className="font-semibold">Professional Nurses</p>
+            <p className="text-sm text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            </p>
           </div>
-          <div className="w-[30%]  h-full  border border-solid border-white">
-            right
+          <div className="w-[30%] h-full  flex flex-col items-center justify-center">
+            <img src={Cash} className="h-[45%]" />
+            <p className="font-semibold">Professional Nurses</p>
+            <p className="text-sm text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            </p>
           </div>
         </div>
       </div>
