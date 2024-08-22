@@ -18,7 +18,7 @@ const Contact = forwardRef((props, ref) => {
         <div className="bg-green w-[40%] h-[3px]"></div>
       </div>
       <div className="flex items-center h-[80%] justify-between w-full text-justify  px-24">
-        <div className="h-full w-[50%] flex flex-col justify-center items-center gap-7 rounded-tl-lg rounded-bl-lg px-6 bg-white ">
+        <div className="h-full w-[50%] flex flex-col justify-center items-center gap-7 rounded-l-lg px-6 bg-white ">
           <Input placeholder={"John Doe"} props={"Full Name"} />
           <Input placeholder={"johndoe@gmail.com"} props={"Email Address"} />
           <TextArea placeholder={"Your message here..."} props={"Message"} />
