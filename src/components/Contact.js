@@ -1,12 +1,15 @@
 import React, { forwardRef } from "react";
 import Input from "./Input";
 import TextArea from "./TextArea";
+import ContactImg from "../assets/contactImg.jpg";
+import PhoneIcon from "../assets/phoneIcon.png";
+import EmailIcon from "../assets/emailIcon.png";
 
 const Contact = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[45.2rem] px-36 py-10 items-center flex flex-col w-full text-dark-blue bg-dark-blue"
+      className="h-[45.2rem] px-36 py-10 items-center flex flex-col w-full text-dark-blue bg-[url('assets/contactBg.png')] bg-cover bg-center bg-no-repeat"
     >
       <div className="h-[10%] w-[20%] flex flex-col items-center gap-3 mb-14  ">
         <p className="uppercase font-semibold text-3xl text-white">
@@ -14,14 +17,8 @@ const Contact = forwardRef((props, ref) => {
         </p>
         <div className="bg-green w-[40%] h-[3px]"></div>
       </div>
-      <div className="flex items-center h-[80%] justify-center w-full gap-x-20 text-justify ">
-        <div className="h-full w-[40%] text-white">
-          <p>
-            Have questions or need help? Use this form to reach out to us. A
-            team member will be in touch with you as quickly as possible.
-          </p>
-        </div>
-        <div className="h-full w-[40%] flex flex-col justify-center items-center gap-7 rounded-lg px-6 bg-white   ">
+      <div className="flex items-center h-[80%] justify-between w-full text-justify  px-24">
+        <div className="h-full w-[50%] flex flex-col justify-center items-center gap-7 rounded-tl-lg rounded-bl-lg px-6 bg-white ">
           <Input placeholder={"John Doe"} props={"Full Name"} />
           <Input placeholder={"johndoe@gmail.com"} props={"Email Address"} />
           <TextArea placeholder={"Your message here..."} props={"Message"} />
@@ -49,6 +46,29 @@ const Contact = forwardRef((props, ref) => {
             </span>
             <span class="relative">Send Message</span>
           </a>
+        </div>
+        <div className="h-full w-[50%] text-white">
+          <img
+            src={ContactImg}
+            className="h-[65%] w-full object-cover rounded-tr-lg"
+          />
+          <div className="h-[35%] flex flex-col justify-center px-7 gap-4 ">
+            <div className=" flex gap-3">
+              <img src={PhoneIcon} className="w-12" />
+              <div className="flex flex-col justify-center">
+                <p className="text-[#A4AEBE] text-sm">Phone Number</p>
+                <p>+1(240)-595-7030</p>
+              </div>
+            </div>
+            <div className=" flex gap-3">
+              {" "}
+              <img src={EmailIcon} className="w-12" />{" "}
+              <div className="flex flex-col justify-center ">
+                <p className="text-[#A4AEBE] text-sm">Email</p>
+                <p>rehobothhc@gmail.com</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

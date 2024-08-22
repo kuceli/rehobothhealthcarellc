@@ -51,7 +51,7 @@ const About = forwardRef((props, ref) => {
         <div className="h-[25%] bg-dark-blue text-white flex items-center justify-center mt-7 gap-12 w-full py-5 px-56">
           <div className="w-[30%] h-full  flex flex-col items-center justify-center transform transition duration-1000 hover:scale-105">
             <img src={Satisfaction} className="h-[45%]" />
-            <p className="font-semibold">Professional Nurses</p>
+            <p className="font-semibold">Satisfaction Guaranteed</p>
             <p className="text-sm text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             </p>
@@ -65,7 +65,7 @@ const About = forwardRef((props, ref) => {
           </div>
           <div className="w-[30%] h-full  flex flex-col items-center justify-center transform transition duration-1000 hover:scale-105">
             <img src={Cash} className="h-[45%]" />
-            <p className="font-semibold">Professional Nurses</p>
+            <p className="font-semibold">Affordable Rates</p>
             <p className="text-sm text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             </p>
