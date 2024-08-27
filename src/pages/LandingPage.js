@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import About from "../components/About";
@@ -7,7 +6,6 @@ import Services from "../components/Services";
 import Areas from "../components/Areas";
 import Contact from "../components/Contact";
 import Logo3 from "../assets/4.png";
-import ServicesAlt from "../components/ServicesAlt";
 
 const LandingPage = () => {
   const home = useRef(null);
@@ -126,8 +124,7 @@ const LandingPage = () => {
         </div>
       </div>
       <About ref={about} />
-      {/* <Services ref={services} /> */}
-      <ServicesAlt ref={services} />
+      <Services ref={services} />
       <Areas ref={areas} />
       <Contact ref={contact} />
       <Footer />

@@ -1,8 +1,9 @@
 import React, { forwardRef } from "react";
 import Heading from "./Heading";
 import ServiceImg1 from "../assets/services1.jpg";
+import PhysicalExerciseImg from "../assets/physical-exercise.jpg";
+import HouseKeepingImg from "../assets/housekeeping.jpg";
 import ServiceImg2 from "../assets/services2.jpg";
-import { MdOutlineRadioButtonChecked } from "react-icons/md";
 
 const Services = forwardRef((props, ref) => {
   return (
@@ -11,142 +12,61 @@ const Services = forwardRef((props, ref) => {
       className="h-[45.2rem] py-10  items-center flex flex-col w-full text-dark-blue bg-alt-light-blue"
     >
       <Heading text="Our Services" />
-      <div className="flex gap-7 w-full px-14 justify-between h-[87%]">
-        <div className="w-[50%]  bg-white rounded-lg h-full flex flex-col justify-between shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+      <div className="flex w-full px-14 py-10justify-between h-[87%] gap-6">
+        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4">
           <img
             src={ServiceImg1}
-            className="w-full h-[64%] rounded-lg object-cover "
+            className="w-[60%] h-[40%] object-cover rounded-full"
           />
-          {/* <div className="w-full h-[60%] rounded-lg bg-dark-blue"></div> */}
-          <div className="p-6 h-[36%]">
-            <p className="font-semibold text-[17px] pb-3">
-              Skilled Nursing Services
-            </p>
-            <div className="flex text-[13px] gap-3">
-              <div className="flex flex-col gap-1">
-                {" "}
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Wound Care Management</span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Post-Operation Care</span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">
-                    Diabetic Management & Care
-                  </span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">
-                    Cardiac/Respiratory Care
-                  </span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Lifting & Transferring</span>
-                </p>
-              </div>
-              <div className="flex flex-col gap-1">
-                {" "}
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">
-                    Medication Management & Administration
-                  </span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">
-                    Safety Measures & Universal Precautions
-                  </span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Infusion & Blood Draws</span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Tube Feeding</span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Live-In</span>
-                </p>
-              </div>
-            </div>
-          </div>
+          <p className="text-lg font-semibold ">Long Term Care</p>
+          <p className="text-sm text-center">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do Lorem
+            ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor
+            sit amet consectetur adipiscing elit sed do
+          </p>
         </div>
-        <div className="w-[50%]  bg-white rounded-lg h-full flex flex-col justify-between shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4">
           <img
-            src={ServiceImg2}
-            className="w-full h-[64%] rounded-lg object-cover "
+            src={PhysicalExerciseImg}
+            className="w-[60%] h-[40%] object-cover rounded-full"
           />
-          {/* <div className="w-full h-[60%] rounded-lg bg-dark-blue"></div> */}
-          <div className="p-6 h-[36%]">
-            <p className="font-semibold text-[17px] pb-3">
-              Unskilled Nursing Services
-            </p>
-            <div className="flex text-[13px] gap-4">
-              <div className="flex flex-col gap-1">
-                {" "}
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">
-                    ADL's e.g., Bathing, Dressing, Feeding etc.
-                  </span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Respite Care</span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Incontinent Care</span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">24 Hours Live-In</span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">
-                    Transport & Accompany to Dr. Appointments
-                  </span>
-                </p>
-              </div>
-              <div className="flex flex-col gap-1">
-                {" "}
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">
-                    Companionship & Safety Supervision
-                  </span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Meal Preparation</span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Light Housekeeping</span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Errands & Shopping</span>
-                </p>
-                <p className="flex items-center gap-3 text-green">
-                  <MdOutlineRadioButtonChecked />{" "}
-                  <span className="text-dark-blue">Medication Reminders</span>
-                </p>
-              </div>
-            </div>
-          </div>
+          <p className="text-lg font-semibold ">Physical Exercise</p>
+          <p className="text-sm text-center">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do Lorem
+            ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor
+            sit amet consectetur adipiscing elit sed do
+          </p>
+        </div>
+        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4">
+          <img
+            src={HouseKeepingImg}
+            className="w-[60%] h-[40%] object-cover rounded-full"
+          />
+          <p className="text-lg font-semibold ">Housekeeping</p>
+          <p className="text-sm text-center">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do Lorem
+            ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor
+            sit amet consectetur adipiscing elit sed do
+          </p>
+        </div>
+        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4">
+          <img
+            src={ServiceImg1}
+            className="w-[60%] h-[40%] object-cover rounded-full"
+          />
+          <p className="text-lg font-semibold ">Medical Services</p>
+          <p className="text-sm text-center">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do Lorem
+            ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor
+            sit amet consectetur adipiscing elit sed do
+          </p>
         </div>
       </div>
+      <p className="text-xl font-semibold text-center">
+        <span className="text-green">"</span>Lorem ipsum dolor sit amet
+        consectetur adipiscing elit
+        <span className="text-green">"</span>
+      </p>
     </div>
   );
 });
