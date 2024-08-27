@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import AreasImg from "../assets/areas.png";
+import AreasImg from "../assets/areasImg.jpg";
 import Areas2 from "../assets/areas2.jpg";
 import { MdOutlineRadioButtonChecked } from "react-icons/md";
 
@@ -62,12 +62,8 @@ const Areas = forwardRef((props, ref) => {
             </div>
           </div>
         </div>
-        <div className="z-10 w-[40%] relative top-[-10%]">
-          {/* <img
-            src={AreasImg}
-            className="h-full w-full object-cover -rotate-45 "
-          /> */}
-          <img src={Areas2} className="h-[120%] w-full object-cover" />
+        <div className="z-10 w-[40%] relative top-[-20%]">
+          <img src={AreasImg} className="h-[140%] w-[90%] object-cover" />
         </div>
       </div>
     </div>

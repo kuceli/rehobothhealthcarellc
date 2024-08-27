@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import ServiceImg1 from "../assets/services1.jpg";
 import PhysicalExerciseImg from "../assets/physical-exercise.jpg";
 import HouseKeepingImg from "../assets/housekeeping.jpg";
-import ServiceImg2 from "../assets/services2.jpg";
+import LongTermCareImg from "../assets/longtermcare.jpg";
 
 const Services = forwardRef((props, ref) => {
   return (
@@ -13,10 +13,10 @@ const Services = forwardRef((props, ref) => {
     >
       <Heading text="Our Services" />
       <div className="flex w-full px-14 py-10justify-between h-[87%] gap-6">
-        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4">
+        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
           <img
-            src={ServiceImg1}
-            className="w-[60%] h-[40%] object-cover rounded-full"
+            src={LongTermCareImg}
+            className="w-[65%] h-[45%] object-cover rounded-full"
           />
           <p className="text-lg font-semibold ">Long Term Care</p>
           <p className="text-sm text-center">
@@ -25,7 +25,7 @@ const Services = forwardRef((props, ref) => {
             sit amet consectetur adipiscing elit sed do
           </p>
         </div>
-        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4">
+        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
           <img
             src={PhysicalExerciseImg}
             className="w-[60%] h-[40%] object-cover rounded-full"
@@ -37,7 +37,7 @@ const Services = forwardRef((props, ref) => {
             sit amet consectetur adipiscing elit sed do
           </p>
         </div>
-        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4">
+        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
           <img
             src={HouseKeepingImg}
             className="w-[60%] h-[40%] object-cover rounded-full"
@@ -49,7 +49,7 @@ const Services = forwardRef((props, ref) => {
             sit amet consectetur adipiscing elit sed do
           </p>
         </div>
-        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4">
+        <div className="w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
           <img
             src={ServiceImg1}
             className="w-[60%] h-[40%] object-cover rounded-full"
