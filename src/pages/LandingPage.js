@@ -1,4 +1,3 @@
-// Filename - LandingPage.js
 import React, { useEffect, useState, useRef } from "react";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
@@ -6,7 +5,6 @@ import About from "../components/About";
 import Services from "../components/Services";
 import Areas from "../components/Areas";
 import Contact from "../components/Contact";
-import RevealOnScroll from "../components/RevealOnScroll";
 import Logo3 from "../assets/4.png";
 
 const LandingPage = () => {
@@ -15,7 +13,6 @@ const LandingPage = () => {
   const services = useRef(null);
   const areas = useRef(null);
   const contact = useRef(null);
-
   const [top, setTop] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
 
@@ -52,7 +49,7 @@ const LandingPage = () => {
           }
         });
       },
-      { threshold: 0.5 } // Adjust the threshold value to fine-tune when a section is considered "in view"
+      { threshold: 0.5 }
     );
 
     sections.forEach((section) => {
@@ -99,6 +96,7 @@ const LandingPage = () => {
               >
                 About Us
               </li>
+
               <li
                 onClick={() => scrollToSection(services, "services")}
                 className={activeSection === "services" ? "text-green" : ""}
@@ -121,21 +119,14 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="h-full pt-14">
-          <Hero ref={home} /> {/* Do not wrap this in RevealOnScroll */}
+          {" "}
+          <Hero ref={home} />
         </div>
       </div>
-      <RevealOnScroll>
-        <About ref={about} />
-      </RevealOnScroll>
-      <RevealOnScroll>
-        <Services ref={services} />
-      </RevealOnScroll>
-      <RevealOnScroll>
-        <Areas ref={areas} />
-      </RevealOnScroll>
-      <RevealOnScroll>
-        <Contact ref={contact} />
-      </RevealOnScroll>
+      <About ref={about} />
+      <Services ref={services} />
+      <Areas ref={areas} />
+      <Contact ref={contact} />
       <Footer />
     </div>
   );

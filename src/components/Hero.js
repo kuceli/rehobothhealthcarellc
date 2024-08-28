@@ -5,6 +5,7 @@ const Hero = forwardRef((props, ref) => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
   return (
     <div
       className={`w-full h-full grid bg-[url('assets/hero2.jpg')] bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out transform ${
