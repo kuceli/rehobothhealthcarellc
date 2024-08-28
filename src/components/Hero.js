@@ -1,8 +1,15 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 const Hero = forwardRef((props, ref) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   return (
     <div
-      className="w-full h-full grid bg-[url('assets/hero2.jpg')] bg-cover bg-center bg-no-repeat"
+      className={`w-full h-full grid bg-[url('assets/hero2.jpg')] bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out transform ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
       ref={ref}
     >
       <div class="col-start-1 row-start-1 bg-gray-800 bg-opacity-70 w-full h-full"></div>
