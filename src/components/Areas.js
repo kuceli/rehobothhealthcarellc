@@ -2,6 +2,8 @@ import React, { forwardRef } from "react";
 import AreasImg from "../assets/areasImg.jpg";
 import Areas2 from "../assets/areas2.jpg";
 import { MdOutlineRadioButtonChecked } from "react-icons/md";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variants";
 
 const Areas = forwardRef((props, ref) => {
   return (
@@ -11,7 +13,13 @@ const Areas = forwardRef((props, ref) => {
     >
       <div className=" w-full h-[60%] flex absolute justify-between pl-36 pr-40 bg-[url('assets/areasBg.jpg')] bg-cover bg-center bg-no-repeat relative">
         <div className="absolute inset-0 bg-gray-800 bg-opacity-85 z-10"></div>
-        <div className="z-10  w-[60%] ">
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="z-10  w-[60%] "
+        >
           <div className="w-full flex flex-col gap-3 mt-20 ">
             <p className="uppercase font-semibold text-3xl text-white">
               Areas We Serve
@@ -61,7 +69,7 @@ const Areas = forwardRef((props, ref) => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className="z-10 w-[40%] relative top-[-20%]">
           <img src={AreasImg} className="h-[140%] w-[90%] object-cover" />
         </div>
