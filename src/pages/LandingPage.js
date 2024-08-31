@@ -69,7 +69,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="w-screen font-[montserrat] overflow-x-hidden">
+    <div className="w-screen font-montserrat overflow-x-hidden">
       <div className="h-screen w-full">
         <div
           className={`h-[56px] fixed left-0 top-0 right-0 z-20 bg-white ${

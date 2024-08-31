@@ -10,7 +10,7 @@ module.exports = {
         green: "#5E9426",
       },
       fontFamily: {
-        montserrat: "Montserrat, sans-serif",
+        montserrat: ["Montserrat", "sans-serif"],
       },
       animation: {
         rotate: "rotate 10s linear infinite",
