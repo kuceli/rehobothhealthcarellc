@@ -28,13 +28,14 @@ const Hero = forwardRef((props, ref) => {
         </div>
         <div className="w-[23.95%]">
           <div class="mx-auto flex items-center justify-center">
-            <div class="relative z-10 flex w-full cursor-pointer items-center overflow-hidden p-[2.5px]">
-              <div class="animate-rotate absolute inset-0 h-full w-full bg-[conic-gradient(#fff_20deg,transparent_120deg)]"></div>
+            <div className="relative z-10 flex w-full cursor-pointer items-center overflow-hidden p-[2.5px]">
+              <div className="animate-rotate absolute inset-0 h-full w-full bg-[conic-gradient(#fff_20deg,transparent_120deg)]"></div>
               <a
                 href="tel:2405957030"
-                class="relative z-50 block border-2 border-solid border-dark-blue hover:border-white bg-white px-8 py-3 text-center text-sm text-dark-blue font-semibold transition duration-200 hover:bg-dark-blue hover:text-white"
+                className="group relative z-50 block border-2 border-solid border-dark-blue bg-white px-8 py-3 text-center text-sm text-dark-blue font-semibold transition duration-200 hover:border-white hover:bg-dark-blue hover:text-white overflow-hidden"
               >
-                Call Us Now
+                <span className="relative z-10">Call Us Now</span>
+                <span className="absolute inset-0 m-auto h-0 w-0 rounded-sm bg-dark-blue transition-all duration-300 ease-out opacity-80 group-hover:h-40 group-hover:w-40"></span>
               </a>
             </div>
           </div>
