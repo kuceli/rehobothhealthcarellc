@@ -5,6 +5,8 @@ import PhoneIcon from "../assets/phoneIcon.png";
 import EmailIcon from "../assets/emailIcon.png";
 import { MdErrorOutline } from "react-icons/md";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { motion } from "framer-motion";
+import { fadeIn } from "./variants";
 
 const Contact = forwardRef((props, ref) => {
   const form = useRef();
@@ -45,13 +47,25 @@ const Contact = forwardRef((props, ref) => {
       ref={ref}
       className="h-[45.2rem] px-36 py-10 items-center flex flex-col w-full text-dark-blue bg-dark-blue"
     >
-      <div className="h-[10%] w-[20%] flex flex-col items-center gap-3 mb-14">
+      <motion.div
+        variants={fadeIn("down", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="h-[10%] w-[20%] flex flex-col items-center gap-3 mb-14"
+      >
         <p className="uppercase font-semibold text-3xl text-white">
           Contact Us
         </p>
         <div className="bg-green w-[40%] h-[3px]"></div>
-      </div>
-      <div className="flex items-center h-[80%] justify-between w-full text-justify px-24">
+      </motion.div>
+      <motion.div
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="flex items-center h-[80%] justify-between w-full text-justify px-24"
+      >
         <form
           ref={form}
           onSubmit={sendEmail}
@@ -137,7 +151,7 @@ const Contact = forwardRef((props, ref) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {modal.isOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80">
