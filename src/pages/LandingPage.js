@@ -6,6 +6,8 @@ import Services from "../components/Services";
 import Areas from "../components/Areas";
 import Contact from "../components/Contact";
 import Logo3 from "../assets/4.png";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
 
 const LandingPage = () => {
   const home = useRef(null);
