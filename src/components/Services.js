@@ -4,8 +4,6 @@ import ServiceImg1 from "../assets/services1.jpg";
 import PhysicalExerciseImg from "../assets/physical-exercise.jpg";
 import HouseKeepingImg from "../assets/housekeeping.jpg";
 import LongTermCareImg from "../assets/longtermcare.jpg";
-import { motion } from "framer-motion";
-import { fadeIn } from "./variants";
 
 const Services = forwardRef((props, ref) => {
   return (
