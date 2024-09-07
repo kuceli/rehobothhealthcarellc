@@ -17,6 +17,7 @@ const LandingPage = () => {
   const contact = useRef(null);
   const [top, setTop] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const scrollToSection = (elementRef, sectionName) => {
     setActiveSection(sectionName);
@@ -24,6 +25,7 @@ const LandingPage = () => {
       top: elementRef.current.offsetTop - 56,
       behavior: "smooth",
     });
+    setMenuOpen(false);
   };
 
   useEffect(() => {
@@ -78,14 +80,31 @@ const LandingPage = () => {
             !top && `bg-white shadow`
           }`}
         >
-          <div className="flex justify-between px-14 items-center py-2 text-sm font-semibold text-dark-blue hover:text-light-blue">
+          <div className="flex justify-between px-14 items-center pt-2 text-sm font-semibold text-dark-blue hover:text-light-blue">
             <img
               src={Logo3}
-              className="h-11 cursor-pointer"
+              className="h-11 cursor-pointer pb-2"
               onClick={() => scrollToSection(home, "home")}
             />
+            {/* Hamburger Icon for smaller screens */}
+            <div className="lg:hidden">
+              {menuOpen ? (
+                <AiOutlineClose
+                  size={24}
+                  onClick={() => setMenuOpen(false)}
+                  className="cursor-pointer"
+                />
+              ) : (
+                <GiHamburgerMenu
+                  size={24}
+                  onClick={() => setMenuOpen(true)}
+                  className="cursor-pointer"
+                />
+              )}
+            </div>
 
-            <ul className="flex gap-9 cursor-pointer">
+            {/* Full Menu for larger screens */}
+            <ul className="hidden lg:flex gap-9 cursor-pointer pb-2">
               <li
                 onClick={() => scrollToSection(home, "home")}
                 className={activeSection === "home" ? "text-green" : ""}
@@ -119,6 +138,51 @@ const LandingPage = () => {
               </li>
             </ul>
           </div>
+          {/* Dropdown Menu for smaller screens */}
+          {menuOpen && (
+            <div
+              className={`bg-white w-full flex flex-col items-center justify-center lg:hidden text-sm font-semibold text-dark-blue hover:text-light-blue border-t overflow-hidden transition-all 
+              ${
+                menuOpen
+                  ? "max-h-[13rem] animate-slideDown"
+                  : "max-h-0 animate-slideUp"
+              }`}
+            >
+              <ul className="bg-white w-full h-[13rem] flex flex-col items-center justify-center gap-4 lg:hidden text-sm font-semibold text-dark-blue hover:text-light-blue border-t">
+                <li
+                  onClick={() => scrollToSection(home, "home")}
+                  className={activeSection === "home" ? "text-green" : ""}
+                >
+                  Home
+                </li>
+                <li
+                  onClick={() => scrollToSection(about, "about")}
+                  className={activeSection === "about" ? "text-green" : ""}
+                >
+                  About Us
+                </li>
+
+                <li
+                  onClick={() => scrollToSection(services, "services")}
+                  className={activeSection === "services" ? "text-green" : ""}
+                >
+                  Our Services
+                </li>
+                <li
+                  onClick={() => scrollToSection(areas, "areas")}
+                  className={activeSection === "areas" ? "text-green" : ""}
+                >
+                  Areas We Serve
+                </li>
+                <li
+                  onClick={() => scrollToSection(contact, "contact")}
+                  className={activeSection === "contact" ? "text-green" : ""}
+                >
+                  Contact Us
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
         <div className="h-full pt-14">
           {" "}

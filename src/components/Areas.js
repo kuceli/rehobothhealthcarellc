@@ -1,6 +1,5 @@
 import React, { forwardRef } from "react";
 import AreasImg from "../assets/areasImg.jpg";
-import Areas2 from "../assets/areas2.jpg";
 import { MdOutlineRadioButtonChecked } from "react-icons/md";
 import { motion } from "framer-motion";
 import { fadeIn } from "./variants";

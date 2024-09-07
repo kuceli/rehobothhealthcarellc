@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState } from "react";
+import React, { forwardRef } from "react";
 const Hero = forwardRef((props, ref) => {
   return (
     <div
