@@ -14,13 +14,7 @@ const Services = forwardRef((props, ref) => {
       className="h-[45.2rem] py-10  items-center flex flex-col w-full text-dark-blue bg-alt-light-blue"
     >
       <Heading text="Our Services" />
-      <motion.div
-        variants={fadeIn("up", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
-        className="flex w-full px-14 py-10justify-between h-[87%] gap-6"
-      >
+      <div className="flex w-full px-14 py-10justify-between h-[87%] gap-6">
         <div className="cursor-default w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
           <img
             src={LongTermCareImg}
@@ -85,5 +79,14 @@ const Services = forwardRef((props, ref) => {
             sit amet consectetur adipiscing elit sed do
           </p>
         </div>
-      </motion.div>
-      <p className="te
+      </div>
+      <p className="text-xl font-semibold text-center">
+        <span className="text-green">"</span>Lorem ipsum dolor sit amet
+        consectetur adipiscing elit
+        <span className="text-green">"</span>
+      </p>
+    </div>
+  );
+});
+
+export default Services;
