@@ -45,7 +45,7 @@ const Contact = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[45.2rem] px-36 py-10 items-center flex flex-col w-full text-dark-blue bg-dark-blue"
+      className="h-[calc(100vh-56px)] px-36 py-10 items-center flex flex-col w-full text-dark-blue bg-dark-blue"
     >
       <motion.div
         variants={fadeIn("down", 0.2)}

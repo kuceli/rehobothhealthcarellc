@@ -3,7 +3,7 @@ import React, { forwardRef } from "react";
 const Hero = forwardRef((props, ref) => {
   return (
     <div
-      className="w-full h-full grid bg-[url('assets/hero2.jpg')] bg-cover bg-center bg-no-repeat"
+      className="w-full h-[calc(100vh-56px)] grid bg-[url('assets/hero2.jpg')] bg-cover bg-center bg-no-repeat"
       ref={ref}
     >
       {/* Overlay */}

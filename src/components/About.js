@@ -14,7 +14,7 @@ const About = forwardRef((props, ref) => {
     <>
       <div
         ref={ref}
-        className="h-[45.2rem] pt-10 items-center justify-center flex flex-col w-full text-dark-blue bg-white "
+        className="h-[calc(100vh-56px)] pt-10 items-center justify-center flex flex-col w-full text-dark-blue bg-white "
       >
         <Heading text="About Us" />
         <div className="flex flex-col h-[87%] w-full  justify-between">
