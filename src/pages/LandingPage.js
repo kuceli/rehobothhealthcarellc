@@ -80,7 +80,7 @@ const LandingPage = () => {
             !top && `bg-white shadow`
           }`}
         >
-          <div className="flex justify-between px-14 items-center pt-2 text-sm font-semibold text-dark-blue hover:text-light-blue">
+          <div className="flex justify-between px-8 sm:px-12 md:px-14 items-center pt-2 text-sm font-semibold text-dark-blue hover:text-light-blue">
             <img
               src={Logo3}
               className="h-11 cursor-pointer pb-2"
@@ -104,7 +104,7 @@ const LandingPage = () => {
             </div>
 
             {/* Full Menu for larger screens */}
-            <ul className="hidden lg:flex gap-9 cursor-pointer pb-2">
+            <ul className="hidden lg:flex gap-9 cursor-pointer">
               <li
                 onClick={() => scrollToSection(home, "home")}
                 className={activeSection === "home" ? "text-green" : ""}
