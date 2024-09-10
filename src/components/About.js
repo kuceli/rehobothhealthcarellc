@@ -28,19 +28,19 @@ const About = forwardRef((props, ref) => {
     <>
       <div
         ref={ref}
-        className="h-[calc(100vh-56px)] pt-10 items-center justify-center flex flex-col w-full text-dark-blue bg-white "
+        className="h-[calc(100vh-56px)] pt-6 md:pt-10 items-center justify-center flex flex-col w-full text-dark-blue bg-white "
       >
         <Heading text="About Us" />
-        <div className="flex flex-col h-[87%] w-full  justify-between">
-          <div className="h-[65%] flex  gap-8 px-14 lg:px-32 xl:px-56">
+        <div className="flex flex-col h-[87%] w-full justify-between">
+          <div className="h-[65%] flex min-[540px]:flex-row flex-col-reverse gap-4 md:gap-6lg:gap-8 px-14 px-8 sm:px-12 md:px-14 lg:px-32 xl:px-56">
             <motion.div
               variants={fadeIn("right", 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className=" h-full w-[50%] flex gap-4 "
+              className="h-full w-[40%] md:w-[50%] hidden min-[540px]:flex gap-4 "
             >
-              <div className="w-[50%] h-[90%] flex flex-col items-end gap-4">
+              <div className="hidden md:block w-[50%] h-[90%] flex flex-col items-end gap-4">
                 <div className="h-[50%] w-full  ">
                   <img src={About1} className="h-full w-full object-cover" />
                 </div>
@@ -48,21 +48,45 @@ const About = forwardRef((props, ref) => {
                   <img src={About2} className="h-full w-full object-cover" />
                 </div>
               </div>
-              <div className="w-[50%] ">
+              <div className="hidden min-[540px]:block w-full md:w-[50%] ">
                 <img src={About3} className="h-full w-full object-cover" />
               </div>
             </motion.div>
+
+            <div className=" h-full w-full hidden min-[355px]:flex min-[540px]:hidden justify-between">
+              <motion.div
+                variants={fadeIn("right", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+                className="h-full w-[48%]"
+              >
+                {" "}
+                <img src={About2} className="h-full w-full object-cover" />
+              </motion.div>
+              <motion.div
+                variants={fadeIn("left", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+                className="h-full w-[48%]"
+              >
+                {" "}
+                <img src={About1} className="h-full w-full object-cover" />
+              </motion.div>
+            </div>
+
             <motion.div
               variants={fadeIn("left", 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className=" h-full w-[50%] h-full flex flex-col gap-4  justify-center "
+              className="h-full w-full min-[540px]:w-[60%] md:w-[50%] h-full flex flex-col gap-2 md:gap-4 justify-center "
             >
-              <p className=" font-semibold text-2xl">
+              <p className=" font-semibold text-lg md:text-xl lg:text-2xl">
                 Providing Health Care Services with a Difference in Maryland.
               </p>
-              <div className="flex flex-col gap-2 text-sm text-justify">
+              <div className="flex flex-col gap-2 text-xs md:text-sm text-justify">
                 <p className=" ">
                   Rehoboth Health Care LLC is a Maryland Provisional Licensed
                   Residential Service Agency that provides skilled and unskilled
@@ -77,9 +101,9 @@ const About = forwardRef((props, ref) => {
               </div>
             </motion.div>
           </div>
-          <div className="lg:hidden h-[35%] bg-dark-blue text-white flex items-center justify-center mt-8 w-full py-3 px-14 lg:px-32 xl:px-56 relative ">
-            <Slider {...carouselSettings} className="h-full w-full">
-              <div className="cursor-default w-full h-full flex gap-3 text-center ">
+          <div className="lg:hidden h-[35%] bg-dark-blue text-white flex items-center justify-center mt-8 w-full px-14 lg:px-32 xl:px-56 relative ">
+            <Slider {...carouselSettings} className="h-full w-full py-5 ">
+              <div className="cursor-default w-full h-full flex gap-3 text-center  ">
                 <img
                   src={Satisfaction}
                   className="w-[22%] h-[22%] sm:h-[13%] sm:w-[13%] m-auto"
@@ -92,7 +116,7 @@ const About = forwardRef((props, ref) => {
                   do
                 </p>
               </div>
-              <div className="cursor-default w-full h-full flex gap-3 text-center ">
+              <div className="cursor-default w-full h-full  flex gap-3 text-center ">
                 <img
                   src={Nurse}
                   className="w-[22%] h-[22%] sm:h-[13%] sm:w-[13%] m-auto"
