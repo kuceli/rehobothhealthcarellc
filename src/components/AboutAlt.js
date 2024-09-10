@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const carouselSettings = {
-  dots: false,
+  dots: true,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
@@ -21,6 +21,7 @@ const carouselSettings = {
   autoplay: true,
   autoplaySpeed: 3000,
   arrows: true,
+  customPaging: (i) => <div className="custom-dot" />,
 };
 
 const About = forwardRef((props, ref) => {
@@ -66,60 +67,60 @@ const About = forwardRef((props, ref) => {
                 <p className=" ">
                   Rehoboth Health Care LLC is a Maryland Provisional Licensed
                   Residential Service Agency that provides skilled and unskilled
-                  in-home nursing services at affordable and competitive rates
-                  in Maryland and its metropolitan areas to seniors, disabled
-                  individuals, and the sick. Nursing services at affordable and
+                  in-home nursing services at afordable and competitive rates in
+                  Maryland and its metropolitan areas to seniors, disable
+                  individuals and the sick. nursing services at afordable and
                   competitive rates in Maryland and its metropolitan areas to
-                  seniors, disabled individuals, and the sick. Competitive rates
-                  in Maryland and its metropolitan areas to seniors, disabled
-                  individuals, and the sick.
+                  seniors, disable individuals and the sick. competitive rates
+                  in Maryland and its metropolitan areas to seniors, disable
+                  individuals and the sick.
                 </p>
               </div>
             </motion.div>
           </div>
-          <div className="lg:hidden h-[35%] bg-dark-blue text-white flex items-center justify-center mt-8 w-full py-3 px-14 lg:px-32 xl:px-56 relative ">
-            <Slider {...carouselSettings} className="h-full w-full">
-              <div className="cursor-default w-full h-full flex gap-3 text-center ">
-                <img
-                  src={Satisfaction}
-                  className="w-[22%] h-[22%] sm:h-[13%] sm:w-[13%] m-auto"
-                />
-                <p className="font-semibold text-sm sm:text-base">
-                  Satisfaction Guaranteed
-                </p>
-                <p className="text-xs sm:text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do
-                </p>
-              </div>
-              <div className="cursor-default w-full h-full flex gap-3 text-center ">
-                <img
-                  src={Nurse}
-                  className="w-[22%] h-[22%] sm:h-[13%] sm:w-[13%] m-auto"
-                />
-                <p className="font-semibold text-sm sm:text-base">
-                  Professional Nurses
-                </p>
-                <p className="text-xs sm:text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do
-                </p>
-              </div>
-              <div className="cursor-default w-full h-full flex gap-3 text-center">
-                <img
-                  src={Cash}
-                  className="w-[22%] h-[22%] sm:h-[13%] sm:w-[13%] m-auto"
-                />
-                <p className="font-semibold text-sm sm:text-base">
-                  Affordable Rates
-                </p>
-                <p className="text-xs sm:text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do
-                </p>
-              </div>
-            </Slider>
-          </div>
+
+          <Slider
+            {...carouselSettings}
+            className="lg:hidden h-[35%] bg-dark-blue text-white flex items-center justify-center mt-8 w-full py-3 px-8 sm:px-14 lg:px-32 xl:px-56"
+          >
+            <div className="cursor-default w-full h-full flex gap-3 text-center ">
+              <img
+                src={Satisfaction}
+                className="w-[22%] h-[22%] sm:h-[13%] sm:w-[13%] m-auto"
+              />
+              <p className="font-semibold text-sm sm:text-base">
+                Satisfaction Guaranteed
+              </p>
+              <p className="text-xs sm:text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              </p>
+            </div>
+            <div className="cursor-default w-full h-full flex gap-3 text-center ">
+              <img
+                src={Nurse}
+                className="w-[22%] h-[22%] sm:h-[13%] sm:w-[13%] m-auto"
+              />
+              <p className="font-semibold text-sm sm:text-base">
+                Professional Nurses
+              </p>
+              <p className="text-xs sm:text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              </p>
+            </div>
+            <div className="cursor-default w-full h-full flex gap-3 text-center">
+              <img
+                src={Cash}
+                className="w-[22%] h-[22%] sm:h-[13%] sm:w-[13%] m-auto"
+              />
+              <p className="font-semibold text-sm sm:text-base">
+                Affordable Rates
+              </p>
+              <p className="text-xs sm:text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              </p>
+            </div>
+          </Slider>
+
           <div className=" hidden lg:flex h-[35%] bg-dark-blue text-white items-center justify-center mt-8 gap-12 w-full py-5 px-14 lg:px-32 xl:px-56">
             <div className="cursor-default w-[30%] h-full  flex flex-col items-center justify-center transform transition-all delay-0 duration-300 ease-in-out hover:scale-105">
               <img src={Satisfaction} className="h-[45%]" />
