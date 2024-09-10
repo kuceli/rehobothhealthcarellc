@@ -8,7 +8,7 @@ const Areas = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[45.2rem] items-center justify-center flex w-full text-white bg-white "
+      className="h-[calc(100vh-56px)] items-center justify-center flex w-full text-white bg-white "
     >
       <div className=" w-full h-[60%] flex absolute justify-between pl-36 pr-40 bg-[url('assets/areasBg.jpg')] bg-cover bg-center bg-no-repeat relative">
         <div className="absolute inset-0 bg-gray-800 bg-opacity-85 z-10"></div>
