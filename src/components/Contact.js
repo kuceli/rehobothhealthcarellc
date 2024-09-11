@@ -45,13 +45,14 @@ const Contact = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[calc(100vh-56px)] px-36 py-6 md:py-10 items-center flex flex-col w-full text-dark-blue bg-dark-blue"
+      className="h-[calc(100vh-56px)] px-8 md:px-14 lg:px-36 py-6 md:py-10 items-center flex flex-col w-full text-dark-blue bg-dark-blue"
     >
-      <div className="h-[10%] w-full md:w-[20%] flex flex-col items-center gap-1 md:gap-2 lg:gap-3 mb-8 ">
+      <div className="h-[10%] w-full md:w-[30%] flex flex-col items-center gap-1 md:gap-2 lg:gap-3 mb-8 ">
         <p className="uppercase font-semibold text-xl sm:text-2xl lg:text-3xl text-white">
+          {" "}
           Contact Us
         </p>
-        <div className="bg-green w-[10%] md:w-[40%] h-[3px]"></div>
+        <div className="bg-green w-[10%] md:w-[35%] h-[3px]"></div>
       </div>
       <motion.div
         variants={fadeIn("up", 0.2)}
