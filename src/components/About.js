@@ -53,7 +53,7 @@ const About = forwardRef((props, ref) => {
               </div>
             </motion.div>
 
-            <div className=" h-full w-full hidden min-[355px]:flex min-[540px]:hidden justify-between">
+            <div className="h-full w-full hidden min-[355px]:flex min-[540px]:hidden justify-between">
               <motion.div
                 variants={fadeIn("right", 0.2)}
                 initial="hidden"
@@ -102,11 +102,8 @@ const About = forwardRef((props, ref) => {
             </motion.div>
           </div>
           <div className="lg:hidden h-[35%] bg-dark-blue text-white flex flex-col items-center justify-center mt-8 py-3 md:py-0 w-full px-14 lg:px-32 xl:px-56 relative ">
-            <Slider
-              {...carouselSettings}
-              className="h-full w-full border border-red-500"
-            >
-              <div className="cursor-default w-full h-full flex gap-3 text-center border border-white py-3">
+            <Slider {...carouselSettings} className="h-full w-full">
+              <div className="cursor-default w-full h-full flex gap-3 text-center py-3">
                 <img
                   src={Satisfaction}
                   className="w-[22%] h-[22%] sm:h-[10%] sm:w-[10%] m-auto"
@@ -119,7 +116,7 @@ const About = forwardRef((props, ref) => {
                   do
                 </p>
               </div>
-              <div className="cursor-default w-full h-full  flex gap-3 text-center  border border-white py-3 ">
+              <div className="cursor-default w-full h-full  flex gap-3 text-center  py-3 ">
                 <img
                   src={Nurse}
                   className="w-[22%] h-[22%] sm:h-[13%] sm:w-[13%] m-auto"
@@ -132,7 +129,7 @@ const About = forwardRef((props, ref) => {
                   do
                 </p>
               </div>
-              <div className="cursor-default w-full h-full flex gap-3 text-center  border border-white py-3">
+              <div className="cursor-default w-full h-full flex gap-3 text-center py-3">
                 <img
                   src={Cash}
                   className="w-[22%] h-[22%] sm:h-[13%] sm:w-[13%] m-auto"
@@ -147,7 +144,7 @@ const About = forwardRef((props, ref) => {
               </div>
             </Slider>
           </div>
-          <div className=" hidden lg:flex h-[35%] bg-dark-blue text-white items-center justify-center mt-8 gap-12 w-full py-5 px-14 lg:px-32 xl:px-56">
+          <div className="hidden lg:flex h-[35%] bg-dark-blue text-white items-center justify-center mt-8 gap-12 w-full py-5 px-14 lg:px-32 xl:px-56">
             <div className="cursor-default w-[30%] h-full  flex flex-col items-center justify-center transform transition-all delay-0 duration-300 ease-in-out hover:scale-105">
               <img src={Satisfaction} className="h-[45%]" />
               <p className="font-semibold">Satisfaction Guaranteed</p>
