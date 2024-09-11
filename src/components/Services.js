@@ -9,14 +9,14 @@ const Services = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-[calc(100vh-56px)] py-6 md:py-10 items-center flex flex-col w-full text-dark-blue bg-alt-light-blue"
+      className="h-[calc(100vh-56px)] pt-6 md:pt-10 items-center flex flex-col w-full text-dark-blue bg-alt-light-blue"
     >
       <Heading text="Our Services" />
-      <div className="flex w-full px-14 py-10justify-between h-[87%] gap-6">
-        <div className="cursor-default w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
+      <div className="flex flex-col lg:flex-row w-full px-14 items-center justify-between h-[87%] gap-6 border border-dark-blue">
+        <div className="cursor-default w-full lg:w-[25%] h-[30%] lg:h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
           <img
-            src={LongTermCareImg}
-            className="w-[65%] h-[45%] object-cover rounded-full"
+            src={PhysicalExerciseImg}
+            className="lg:block hidden w-[60%] h-[40%] object-cover rounded-full"
           />
           <a
             href="#"
@@ -29,10 +29,10 @@ const Services = forwardRef((props, ref) => {
             sit amet consectetur adipiscing elit sed do
           </p>
         </div>
-        <div className=" cursor-default w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
+        <div className=" cursor-default w-full lg:w-[25%] h-[30%] lg:h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
           <img
             src={PhysicalExerciseImg}
-            className="w-[60%] h-[40%] object-cover rounded-full"
+            className="lg:block hidden w-[60%] h-[40%] object-cover rounded-full"
           />
           <a
             href="#"
@@ -45,10 +45,10 @@ const Services = forwardRef((props, ref) => {
             sit amet consectetur adipiscing elit sed do
           </p>
         </div>
-        <div className=" cursor-default w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
+        <div className=" cursor-default w-full lg:w-[25%] h-[30%] lg:h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
           <img
             src={HouseKeepingImg}
-            className="w-[60%] h-[40%] object-cover rounded-full"
+            className="lg:block hidden w-[60%] h-[40%] object-cover rounded-full"
           />
           <a
             href="#"
@@ -61,10 +61,10 @@ const Services = forwardRef((props, ref) => {
             sit amet consectetur adipiscing elit sed do
           </p>
         </div>
-        <div className=" cursor-default w-[25%] h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
+        <div className=" cursor-default w-full lg:w-[25%] h-[30%] lg:h-[85%] rounded-tr-[40px] rounded-bl-[40px] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-7 flex flex-col items-center justify-center gap-4 transition-all delay-0 duration-300 ease-in-out [translate:0] hover:[translate:0_-10px]">
           <img
             src={ServiceImg1}
-            className="w-[60%] h-[40%] object-cover rounded-full"
+            className="lg:block hidden w-[60%] h-[40%] object-cover rounded-full"
           />
           <a
             href="#"
@@ -78,7 +78,7 @@ const Services = forwardRef((props, ref) => {
           </p>
         </div>
       </div>
-      <p className="text-xl font-semibold text-center">
+      <p className="text-base lg:text-xl font-semibold text-center ">
         <span className="text-green">"</span>Lorem ipsum dolor sit amet
         consectetur adipiscing elit
         <span className="text-green">"</span>
