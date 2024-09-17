@@ -73,24 +73,28 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="w-screen font-montserrat overflow-x-hidden">
+    <div className="h-full w-screen font-montserrat overflow-x-hidden">
       <div className="h-screen w-full">
         <div
           className={`h-[56px] fixed left-0 top-0 right-0 z-20 bg-white ${
             !top && `bg-white shadow`
           }`}
         >
-          <div className="flex justify-between px-8 sm:px-12 md:px-14 items-center pt-2 text-sm font-semibold text-dark-blue hover:text-light-blue">
-            <img
-              src={Logo3}
-              className="h-11 cursor-pointer pb-2"
-              onClick={() => scrollToSection(home, "home")}
-            />
+          <div className="h-full flex justify-between items-center text-sm font-semibold text-dark-blue hover:text-light-blue">
+            {/* Logo */}
+            <div className="h-9 sm:h-11 flex justify-start pl-8 sm:pl-12 md:pl-14 flex-grow ">
+              <img
+                src={Logo3}
+                className="h-full object-contain cursor-pointer "
+                onClick={() => scrollToSection(home, "home")}
+              />
+            </div>
+
             {/* Hamburger Icon for smaller screens */}
-            <div className="lg:hidden">
+            <div className="lg:hidden flex justify-end pr-8 sm:pr-12 md:pr-14  flex-grow">
               {menuOpen ? (
                 <AiOutlineClose
-                  size={24}
+                  size={22}
                   onClick={() => setMenuOpen(false)}
                   className="cursor-pointer"
                 />
@@ -104,7 +108,7 @@ const LandingPage = () => {
             </div>
 
             {/* Full Menu for larger screens */}
-            <ul className="hidden lg:flex gap-9 cursor-pointer">
+            <ul className="hidden lg:flex gap-9 cursor-pointer flex-grow justify-end pr-8 sm:pr-12 md:pr-14 ">
               <li
                 onClick={() => scrollToSection(home, "home")}
                 className={activeSection === "home" ? "text-green" : ""}
