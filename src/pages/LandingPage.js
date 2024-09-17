@@ -82,16 +82,16 @@ const LandingPage = () => {
         >
           <div className="h-full flex justify-between items-center text-sm font-semibold text-dark-blue hover:text-light-blue">
             {/* Logo */}
-            <div className="h-9 sm:h-11 flex justify-center flex-grow">
+            <div className="h-9 sm:h-11 flex justify-start pl-8 sm:pl-12 md:pl-14 flex-grow ">
               <img
                 src={Logo3}
-                className="h-full object-contain cursor-pointer border border-dark-blue"
+                className="h-full object-contain cursor-pointer "
                 onClick={() => scrollToSection(home, "home")}
               />
             </div>
 
             {/* Hamburger Icon for smaller screens */}
-            <div className="lg:hidden flex justify-center flex-grow">
+            <div className="lg:hidden flex justify-end pr-8 sm:pr-12 md:pr-14  flex-grow">
               {menuOpen ? (
                 <AiOutlineClose
                   size={22}
@@ -108,7 +108,7 @@ const LandingPage = () => {
             </div>
 
             {/* Full Menu for larger screens */}
-            <ul className="hidden lg:flex gap-9 cursor-pointer flex-grow justify-center">
+            <ul className="hidden lg:flex gap-9 cursor-pointer flex-grow justify-end pr-8 sm:pr-12 md:pr-14 ">
               <li
                 onClick={() => scrollToSection(home, "home")}
                 className={activeSection === "home" ? "text-green" : ""}
