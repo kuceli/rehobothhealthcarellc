@@ -6,10 +6,10 @@ const Services = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-full sm:h-[calc(100vh-56px)] pt-6 md:pt-10 items-center flex flex-col w-full text-dark-blue bg-alt-light-blue"
+      className="h-full lg:h-[calc(100vh-56px)] pt-6 md:pt-10 items-center flex flex-col w-full text-dark-blue bg-alt-light-blue"
     >
       <Heading text="Our Services" />
-      <div className="flex flex-col lg:flex-row w-full px-8 sm:px-12 md:px-14 items-center justify-between h-[87%] gap-4 xl:gap-6">
+      <div className="flex flex-col lg:flex-row w-full px-6 sm:px-10 md:px-12 lg:px-14 items-center justify-between h-[87%] gap-4 xl:gap-6">
         {servicesData.map((service, index) => (
           <div
             key={index}
@@ -26,10 +26,21 @@ const Services = forwardRef((props, ref) => {
                 className="absolute w-full h-full top-0 left-0 bg-white opacity-0 z-10 transition-opacity duration-300 hover:opacity-15"
               ></a>
             </div>
-            <div className="h-[60%] p-3 flex flex-col items-center justify-center gap-2 xl:gap-4">
+            <div className="h-[60%] py-3 px-10 lg:p-3 flex flex-col items-center justify-center gap-3 lg:gap-2 xl:gap-4">
               <p className="text-base md:text-lg xl:text-xl font-semibold z-20">
                 {service.heading}
               </p>
+              <div className="lg:hidden block w-[35%] h-[35%] relative">
+                <img
+                  src={service.img}
+                  className="w-full h-full object-cover "
+                  alt={`Service ${index}`}
+                />
+                <a
+                  href="#"
+                  className="absolute w-full h-full top-0 left-0 bg-white opacity-0 z-10 transition-opacity duration-300 hover:opacity-15"
+                ></a>
+              </div>
               <p className="text-xs md:text-sm xl:text-base text-center z-20">
                 {service.text}
               </p>
