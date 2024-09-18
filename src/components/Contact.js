@@ -11,6 +11,8 @@ import { fadeIn } from "./variants";
 const Contact = forwardRef((props, ref) => {
   const form = useRef();
   const [modal, setModal] = useState({ isOpen: false, message: "", type: "" });
+  const [errors, setErrors] = useState({});
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     if (modal.isOpen) {
@@ -24,8 +26,83 @@ const Contact = forwardRef((props, ref) => {
     };
   }, [modal.isOpen]);
 
+  const validateForm = () => {
+    const formData = new FormData(form.current);
+    const message = formData.get("message");
+
+    let validationErrors = {};
+
+    // Validate if the message is empty
+    if (message.trim().length === 0) {
+      validationErrors.message = "Message cannot be empty.";
+    }
+
+    setErrors(validationErrors);
+
+    // If there are no validation errors, return true; otherwise, return false
+    return Object.keys(validationErrors).length === 0;
+  };
+
+  const handleInputChange = (e) => {
+    const { value } = e.target;
+
+    // Update the state if the value length is within the limit
+    setMessage(value);
+
+    // Check if the message exceeds 260 characters
+    if (value.length >= 260) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        message: "Message cannot exceed 260 characters.",
+      }));
+    } else {
+      // Clear the error if under the limit
+      setErrors((prevErrors) => {
+        const { message, ...rest } = prevErrors;
+        return rest;
+      });
+    }
+  };
+
+  const handleNameChange = (e) => {
+    const { value } = e.target;
+
+    // Validate the name field in real-time
+    if (!/^[a-zA-Z\s]*$/.test(value)) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        name: "Please enter a valid name.",
+      }));
+    } else {
+      setErrors((prevErrors) => {
+        const { name, ...rest } = prevErrors;
+        return rest;
+      });
+    }
+  };
+
+  const handleEmailChange = (e) => {
+    const { value } = e.target;
+
+    // Validate the email field in real-time
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]*$/.test(value)) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: "Please enter a valid email address.",
+      }));
+    } else {
+      setErrors((prevErrors) => {
+        const { email, ...rest } = prevErrors;
+        return rest;
+      });
+    }
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
+    if (!validateForm()) {
+      return;
+    }
 
     emailjs
       .sendForm("service_943b9ml", "template_ccc5izx", form.current, {
@@ -39,6 +116,7 @@ const Contact = forwardRef((props, ref) => {
             type: "success",
           });
           form.current.reset();
+          setMessage("");
         },
         (error) => {
           setModal({
@@ -76,44 +154,63 @@ const Contact = forwardRef((props, ref) => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="h-[90%] sm:h-full w-full sm:w-[50%] flex flex-col justify-center items-center gap-7 max-sm:rounded-lg sm:rounded-l-lg px-6 py-10 sm:py-0 sm:px-6 bg-white"
+          className="h-[90%] sm:h-full w-full sm:w-[50%] flex flex-col justify-center gap-4 max-sm:rounded-lg sm:rounded-l-lg px-6 py-10 sm:py-0 sm:px-6 bg-white"
         >
           <div className="relative w-full h-11 flex flex-col justify-center items-center">
             <input
               type="text"
               name="user_name"
               placeholder="John Doe"
+              onChange={handleNameChange}
               className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-xs sm:text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
             />
             <label className="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-xs sm:text-sm font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-dark-blue after:transition-transform after:duration-300 peer-placeholder-shown:text-[13px] sm:peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-dark-blue peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
               Full Name <span className="text-red-500">*</span>
             </label>
           </div>
+          <div className="h-1 flex items-center">
+            {errors.name && (
+              <p className="text-red-500 text-xs">{errors.name}</p>
+            )}
+          </div>
           <div className="relative h-11 w-full flex flex-col justify-center items-center">
             <input
               type="email"
               name="user_email"
               placeholder="johndoe@gmail.com"
+              onChange={handleEmailChange}
               className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-xs sm:text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
             />
             <label className="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-xs sm:text-sm font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-dark-blue after:transition-transform after:duration-300 peer-placeholder-shown:text-[13px] sm:peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-dark-blue peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
               Email Address <span className="text-red-500">*</span>
             </label>
           </div>
+          <div className="h-1 flex items-center">
+            {errors.email && (
+              <p className="text-red-500 text-xs">{errors.email}</p>
+            )}
+          </div>
           <div className="relative h-36 w-full flex flex-col justify-center items-center">
             <textarea
               name="message"
+              value={message}
+              maxLength={260}
+              onChange={handleInputChange}
               placeholder="Your message here..."
-              maxLength={270}
               className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-xs sm:text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
             ></textarea>
             <label className="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-xs sm:text-sm font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-dark-blue after:transition-transform after:duration-300 peer-placeholder-shown:text-[13px] sm:peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-dark-blue peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
               Message <span className="text-red-500">*</span>
             </label>
           </div>
+          <div className="h-1 flex items-center">
+            {errors.message && (
+              <p className="text-red-500 text-xs">{errors.message}</p>
+            )}
+          </div>
           <button
             type="submit"
-            className="relative inline-flex items-center px-12 py-3 overflow-hidden text-xs sm:text-sm font-semibold text-dark-blue border-2 border-dark-blue hover:text-white group hover:bg-gray-50"
+            className="relative inline-flex mx-auto items-center px-12 py-3 overflow-hidden text-xs sm:text-sm font-semibold text-dark-blue border-2 border-dark-blue hover:text-white group hover:bg-gray-50"
           >
             <span className="absolute left-0 block w-full h-0 transition-all bg-dark-blue opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
             <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
@@ -197,7 +294,7 @@ const Contact = forwardRef((props, ref) => {
 
             <button
               onClick={closeModal}
-              class="mt-4 before:ease relative h-10 w-28 overflow-hidden bg-gray-300 transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40"
+              className="mt-4 before:ease relative h-10 w-28 overflow-hidden bg-gray-300 transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40"
             >
               <span relative="relative z-10">Close</span>
             </button>
