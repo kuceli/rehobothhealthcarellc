@@ -80,9 +80,9 @@ const LandingPage = () => {
             !top && `bg-white shadow`
           }`}
         >
-          <div className="h-full flex justify-between items-center text-sm font-semibold text-dark-blue hover:text-light-blue">
+          <div className="h-full flex justify-between items-center text-xs sm:text-sm font-semibold text-dark-blue hover:text-light-blue">
             {/* Logo */}
-            <div className="h-9 sm:h-11 flex justify-start pl-8 sm:pl-12 md:pl-14 flex-grow ">
+            <div className="h-9 sm:h-11 flex justify-start pl-6 sm:pl-10 md:pl-12 lg:pl-14 flex-grow ">
               <img
                 src={Logo3}
                 className="h-full object-contain cursor-pointer "
@@ -91,7 +91,7 @@ const LandingPage = () => {
             </div>
 
             {/* Hamburger Icon for smaller screens */}
-            <div className="lg:hidden flex justify-end pr-8 sm:pr-12 md:pr-14  flex-grow">
+            <div className="lg:hidden flex justify-end pr-6 sm:pr-10 md:pr-12 lg:pr-14  flex-grow">
               {menuOpen ? (
                 <AiOutlineClose
                   size={22}
@@ -108,7 +108,7 @@ const LandingPage = () => {
             </div>
 
             {/* Full Menu for larger screens */}
-            <ul className="hidden lg:flex gap-9 cursor-pointer flex-grow justify-end pr-8 sm:pr-12 md:pr-14 ">
+            <ul className="hidden lg:flex gap-9 cursor-pointer flex-grow justify-end pr-6 sm:pr-10 md:pr-12 lg:pr-14 ">
               <li
                 onClick={() => scrollToSection(home, "home")}
                 className={activeSection === "home" ? "text-green" : ""}
@@ -145,14 +145,14 @@ const LandingPage = () => {
           {/* Dropdown Menu for smaller screens */}
           {menuOpen && (
             <div
-              className={`bg-white w-full flex flex-col items-center justify-center lg:hidden text-sm font-semibold text-dark-blue hover:text-light-blue border-t overflow-hidden transition-all 
+              className={`bg-white w-full flex flex-col items-center justify-center lg:hidden text-xs sm:text-sm font-semibold text-dark-blue hover:text-light-blue border-t overflow-hidden transition-all 
               ${
                 menuOpen
                   ? "max-h-[13rem] animate-slideDown"
                   : "max-h-0 animate-slideUp"
               }`}
             >
-              <ul className="bg-white w-full h-[13rem] flex flex-col items-center justify-center gap-4 lg:hidden text-sm font-semibold text-dark-blue hover:text-light-blue border-t">
+              <ul className="bg-white w-full h-[10rem] sm:h-[13rem] flex flex-col items-center justify-center gap-3 sm:gap-4 lg:hidden text-xs sm:text-sm font-semibold text-dark-blue hover:text-light-blue border-t">
                 <li
                   onClick={() => scrollToSection(home, "home")}
                   className={activeSection === "home" ? "text-green" : ""}

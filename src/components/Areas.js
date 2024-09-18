@@ -10,7 +10,7 @@ const Areas = forwardRef((props, ref) => {
       ref={ref}
       className="h-[calc(100vh-56px)] items-center justify-center flex w-full text-white bg-white "
     >
-      <div className=" w-full h-[60%] flex absolute justify-between pl-8 sm:pl-12 md:pl-14 lg:pl-20 xl:pl-36 pr-8 sm:pr-12 md:pr-14 lg:pr-24 xl:pr-40 bg-[url('assets/areasBg.jpg')] bg-cover bg-center bg-no-repeat relative">
+      <div className=" w-full h-[60%] flex absolute justify-between pl-6 sm:pl-10 md:pl-14 lg:pl-20 xl:pl-36 pr-8 sm:pr-12 md:pr-14 lg:pr-24 xl:pr-40 bg-[url('assets/areasBg.jpg')] bg-cover bg-center bg-no-repeat relative">
         <div className="absolute inset-0 bg-gray-800 bg-opacity-85 z-10"></div>
         <motion.div
           variants={fadeIn("right", 0.2)}

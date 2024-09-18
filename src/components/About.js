@@ -29,11 +29,11 @@ const About = forwardRef((props, ref) => {
     <>
       <div
         ref={ref}
-        className="h-[calc(100vh-56px)] pt-6 md:pt-10 items-center justify-center flex flex-col w-full text-dark-blue bg-white "
+        className="h-full min-[355px]:h-[calc(100vh-56px)] pt-6 md:pt-10 items-center justify-center flex flex-col w-full text-dark-blue bg-white "
       >
         <Heading text="About Us" />
         <div className="flex flex-col h-[87%] w-full justify-between">
-          <div className="h-[65%] flex min-[540px]:flex-row flex-col-reverse gap-4 md:gap-6 lg:gap-8 px-8 sm:px-12 md:px-14 lg:px-32 xl:px-56">
+          <div className="h-[40%] min-[355px]:h-[65%] flex min-[540px]:flex-row flex-col-reverse gap-4 md:gap-6 lg:gap-8 px-6 sm:px-10 md:px-14 lg:px-32 xl:px-56">
             <motion.div
               variants={fadeIn("right", 0.2)}
               initial="hidden"
@@ -54,7 +54,7 @@ const About = forwardRef((props, ref) => {
               </div>
             </motion.div>
 
-            <div className="h-full w-full hidden min-[355px]:flex min-[540px]:hidden justify-between">
+            <div className="h-full w-full flex flex-row min-[540px]:hidden justify-between">
               <motion.div
                 variants={fadeIn("right", 0.2)}
                 initial="hidden"
@@ -82,7 +82,7 @@ const About = forwardRef((props, ref) => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="h-full w-full min-[540px]:w-[60%] md:w-[50%] h-full flex flex-col gap-2 md:gap-4 justify-center "
+              className="h-full w-full min-[540px]:w-[60%] md:w-[50%] flex flex-col gap-2 md:gap-4 justify-center border border-solid border-red-500 "
             >
               <p className=" font-semibold text-lg md:text-xl lg:text-2xl">
                 Providing Health Care Services with a Difference in Maryland.
@@ -122,27 +122,16 @@ const About = forwardRef((props, ref) => {
             </Slider>
           </div>
           <div className="hidden lg:flex h-[35%] bg-dark-blue text-white items-center justify-center mt-8 gap-12 w-full py-5 px-14 lg:px-32 xl:px-56">
-            <div className="cursor-default w-[30%] h-full  flex flex-col items-center justify-center transform transition-all delay-0 duration-300 ease-in-out hover:scale-105">
-              <img src={Satisfaction} className="h-[45%]" />
-              <p className="font-semibold">Satisfaction Guaranteed</p>
-              <p className="text-sm text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              </p>
-            </div>
-            <div className="cursor-default w-[30%] h-full  flex flex-col items-center justify-center transform transition-all delay-0 duration-300 ease-in-out hover:scale-105">
-              <img src={Nurse} className="h-[45%]" />
-              <p className="font-semibold">Professional Nurses</p>
-              <p className="text-sm text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              </p>
-            </div>
-            <div className="cursor-default w-[30%] h-full  flex flex-col items-center justify-center transform transition-all delay-0 duration-300 ease-in-out hover:scale-105">
-              <img src={Cash} className="h-[45%]" />
-              <p className="font-semibold">Affordable Rates</p>
-              <p className="text-sm text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              </p>
-            </div>
+            {aboutData.map((about, index) => (
+              <div
+                key={index}
+                className="cursor-default w-[30%] h-full  flex flex-col items-center justify-center transform transition-all delay-0 duration-300 ease-in-out hover:scale-105"
+              >
+                <img src={about.img} className="h-[45%]" />
+                <p className="font-semibold"> {about.heading}</p>
+                <p className="text-sm text-center">{about.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
