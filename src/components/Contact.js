@@ -1,4 +1,4 @@
-import React, { useRef, forwardRef, useState } from "react";
+import React, { useRef, forwardRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import ContactImg from "../assets/contactImg.jpg";
 import PhoneIcon from "../assets/phoneIcon.png";
@@ -11,6 +11,18 @@ import { fadeIn } from "./variants";
 const Contact = forwardRef((props, ref) => {
   const form = useRef();
   const [modal, setModal] = useState({ isOpen: false, message: "", type: "" });
+
+  useEffect(() => {
+    if (modal.isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [modal.isOpen]);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -163,11 +175,15 @@ const Contact = forwardRef((props, ref) => {
       </motion.div>
 
       {modal.isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80">
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80"
+          onClick={closeModal}
+        >
           <div
             className={`bg-white py-6 px-6 sm:px-10 rounded-lg flex flex-col items-center text-xs sm:text-sm ${
               modal.type === "success" ? "text-green" : "text-red-600"
             }`}
+            onClick={(e) => e.stopPropagation()}
           >
             <MdErrorOutline
               size={160}
