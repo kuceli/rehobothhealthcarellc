@@ -10,7 +10,7 @@ const Hero = forwardRef((props, ref) => {
       <div className="col-start-1 row-start-1 bg-gray-800 bg-opacity-70 w-full h-full"></div>
 
       {/* Content */}
-      <div className="w-[85%] sm:w-[70%] lg:w-[50%] h-full flex flex-col justify-center text-white gap-4 col-start-1 row-start-1 pl-8 sm:px-12 md:px-14">
+      <div className="w-[85%] sm:w-[70%] lg:w-[50%] h-full flex flex-col justify-center text-white gap-4 col-start-1 row-start-1 pl-6 sm:px-10 md:px-12 lg:14">
         {/* Heading */}
         <p className="uppercase font-semibold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-snug sm:leading-tight lg:leading-10">
           We are here <br />
@@ -20,7 +20,7 @@ const Hero = forwardRef((props, ref) => {
         </p>
 
         {/* Subtext */}
-        <p className=" md:w-[80%] lg:w-[70%] text-sm text-justify">
+        <p className=" md:w-[80%] lg:w-[70%] text-xs sm:text-sm text-justify">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim nostrud eiusmod tempor incididunt ut labore et dolore magna.
