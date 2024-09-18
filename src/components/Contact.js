@@ -45,7 +45,7 @@ const Contact = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="h-full sm:h-[calc(100vh-56px)] px-6 sm:px-12 md:px-14 xl:px-36 py-6 md:py-10 items-center flex flex-col w-full text-dark-blue bg-dark-blue"
+      className="h-full sm:h-[calc(100vh-56px)] px-6 sm:px-10 md:px-12 lg:px-14 xl:px-36 py-6 md:py-10 items-center flex flex-col w-full text-dark-blue bg-dark-blue"
     >
       <div className="h-[10%] w-full md:w-[30%] flex flex-col items-center gap-1 md:gap-2 lg:gap-3 mb-8 ">
         <p className="uppercase font-semibold text-xl sm:text-2xl lg:text-3xl text-white">
@@ -64,7 +64,7 @@ const Contact = forwardRef((props, ref) => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="h-[90%] sm:h-full w-full sm:w-[50%] flex flex-col justify-center items-center gap-7 max-sm:rounded-lg sm:rounded-l-lg px-10 py-10 sm:py-0 sm:px-6 bg-white"
+          className="h-[90%] sm:h-full w-full sm:w-[50%] flex flex-col justify-center items-center gap-7 max-sm:rounded-lg sm:rounded-l-lg px-6 py-10 sm:py-0 sm:px-6 bg-white"
         >
           <div className="relative w-full h-11 flex flex-col justify-center items-center">
             <input
@@ -73,7 +73,7 @@ const Contact = forwardRef((props, ref) => {
               placeholder="John Doe"
               className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-xs sm:text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
             />
-            <label className="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-xs sm:text-sm font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-dark-blue after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-dark-blue peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+            <label className="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-xs sm:text-sm font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-dark-blue after:transition-transform after:duration-300 peer-placeholder-shown:text-[13px] sm:peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-dark-blue peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
               Full Name <span className="text-red-500">*</span>
             </label>
           </div>
@@ -84,7 +84,7 @@ const Contact = forwardRef((props, ref) => {
               placeholder="johndoe@gmail.com"
               className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-xs sm:text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
             />
-            <label className="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-xs sm:text-sm font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-dark-blue after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-dark-blue peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+            <label className="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-xs sm:text-sm font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-dark-blue after:transition-transform after:duration-300 peer-placeholder-shown:text-[13px] sm:peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-dark-blue peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
               Email Address <span className="text-red-500">*</span>
             </label>
           </div>
@@ -95,7 +95,7 @@ const Contact = forwardRef((props, ref) => {
               maxLength={270}
               className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-xs sm:text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
             ></textarea>
-            <label className="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-xs sm:text-sm font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-dark-blue after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-dark-blue peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+            <label className="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-xs sm:text-sm font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-dark-blue after:transition-transform after:duration-300 peer-placeholder-shown:text-[13px] sm:peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-dark-blue peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
               Message <span className="text-red-500">*</span>
             </label>
           </div>
@@ -165,7 +165,7 @@ const Contact = forwardRef((props, ref) => {
       {modal.isOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80">
           <div
-            className={`bg-white py-6 px-10 rounded-lg flex flex-col items-center text-xs sm:text-sm ${
+            className={`bg-white py-6 px-6 sm:px-10 rounded-lg flex flex-col items-center text-xs sm:text-sm ${
               modal.type === "success" ? "text-green" : "text-red-600"
             }`}
           >
