@@ -5,16 +5,16 @@ export const aboutData = [
   {
     img: Satisfaction,
     heading: "Satisfaction Guaranteed",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+    text: "We create personalized care plans tailored to each client's needs, ensuring respect, compassion, and satisfaction.",
   },
   {
     img: Nurse,
     heading: "Professional Nurses",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+    text: "Our certified nurses and caregivers have extensive experience in delivering top-quality, personalized care to every client.",
   },
   {
     img: Cash,
     heading: "Affordable Rates",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+    text: "We provide premium care at competitive rates, ensuring accessibility without compromising quality.",
   },
 ];

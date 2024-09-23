@@ -21,9 +21,9 @@ const Hero = forwardRef((props, ref) => {
 
         {/* Subtext */}
         <p className=" md:w-[80%] lg:w-[70%] text-xs sm:text-sm text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim nostrud eiusmod tempor incididunt ut labore et dolore magna.
+          Maryland's exceptional in-home nursing service! Our certified staff
+          delivers tailored, compassionate care right at home. Choose Rehoboth
+          Health Care LLC for the quality support your family deserves!
         </p>
 
         {/* Button */}

@@ -49,8 +49,8 @@ const Services = forwardRef((props, ref) => {
         ))}
       </div>
       <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-center py-3">
-        <span className="text-green">"</span>Lorem ipsum dolor sit amet
-        consectetur adipiscing elit
+        <span className="text-green">"</span>Compassionate Care, Tailored for
+        You
         <span className="text-green">"</span>
       </p>
     </div>

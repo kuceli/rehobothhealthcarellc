@@ -28,8 +28,9 @@ const Areas = forwardRef((props, ref) => {
 
           <div className="w-[97%] md:w-[70%] pb-10 pt-5 h-[70%] ">
             <p className="text-xs md:text-sm xl:text-base pb-5">
-              lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-              lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+              Your health and comfort are our top priorities in Maryland. We
+              deliver exceptional home care services, ensuring every client
+              receives the best care possible. Proudly serving:
             </p>
 
             <div className="flex gap-10 w-[100%] max-[517px]:justify-start max-[565px]:justify-between text-xs md:text-sm xl:text-base">
