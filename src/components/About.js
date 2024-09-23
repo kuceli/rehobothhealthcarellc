@@ -82,7 +82,7 @@ const About = forwardRef((props, ref) => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="h-full w-full min-[540px]:w-[60%] md:w-[50%] flex flex-col gap-2 md:gap-4 justify-center border border-solid border-red-500 "
+              className="h-full w-full min-[540px]:w-[60%] md:w-[50%] flex flex-col gap-2 md:gap-4 justify-center "
             >
               <p className=" font-semibold text-lg md:text-xl lg:text-2xl">
                 Providing Health Care Services with a Difference in Maryland.

@@ -10,13 +10,13 @@ export const servicesData = [
     text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do Lorem ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor sit amet consectetur adipiscing elit sed do.",
   },
   {
-    img: HouseKeepingImg,
-    heading: "Housekeeping",
+    img: LongTermCareImg,
+    heading: "Long Term Care",
     text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do Lorem ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor sit amet consectetur adipiscing elit sed do.",
   },
   {
     img: HouseKeepingImg,
-    heading: "Long Term Care",
+    heading: "Housekeeping",
     text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do Lorem ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor sit amet consectetur adipiscing elit sed do.",
   },
   {
