@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/rehobothhealthcarellc/static/css/main.65e3ecf2.css",
+    "main.js": "/rehobothhealthcarellc/static/js/main.8240ba30.js",
+    "static/js/453.7ca7c9fa.chunk.js": "/rehobothhealthcarellc/static/js/453.7ca7c9fa.chunk.js",
+    "static/media/about3.jpg": "/rehobothhealthcarellc/static/media/about3.fd9caa95475ff519bcf2.jpg",
+    "static/media/longtermcare.jpg": "/rehobothhealthcarellc/static/media/longtermcare.f84631c59b4af8c077a4.jpg",
+    "static/media/services1.jpg": "/rehobothhealthcarellc/static/media/services1.55c8ae84417e1b5d23f8.jpg",
+    "static/media/about1.jpg": "/rehobothhealthcarellc/static/media/about1.e43651474b2430ee8af6.jpg",
+    "static/media/physical-exercise.jpg": "/rehobothhealthcarellc/static/media/physical-exercise.2de07c64ff7c28456cd4.jpg",
+    "static/media/hero2.jpg": "/rehobothhealthcarellc/static/media/hero2.f29aee06905243d06583.jpg",
+    "static/media/areasBg.jpg": "/rehobothhealthcarellc/static/media/areasBg.d47dff04e36b8d591058.jpg",
+    "static/media/housekeeping.jpg": "/rehobothhealthcarellc/static/media/housekeeping.65269440bddb25c54482.jpg",
+    "static/media/areasImg.jpg": "/rehobothhealthcarellc/static/media/areasImg.aabf6d453bfdb167c748.jpg",
+    "static/media/contactImg.jpg": "/rehobothhealthcarellc/static/media/contactImg.2158cb2bf93abc4ab211.jpg",
+    "static/media/about2.jpg": "/rehobothhealthcarellc/static/media/about2.ec764f19fb2b390c1c31.jpg",
+    "static/media/satisfaction.png": "/rehobothhealthcarellc/static/media/satisfaction.1a61ee24ea3e08af363e.png",
+    "static/media/cash.png": "/rehobothhealthcarellc/static/media/cash.46fc1a5c419c6fa6ad7a.png",
+    "static/media/nurse.png": "/rehobothhealthcarellc/static/media/nurse.7f9d7f95f0f4fbe58a2a.png",
+    "static/media/4.png": "/rehobothhealthcarellc/static/media/4.d5d8e8cdac35c4a2343b.png",
+    "static/media/slick.svg": "/rehobothhealthcarellc/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/rehobothhealthcarellc/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/rehobothhealthcarellc/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/rehobothhealthcarellc/index.html",
+    "static/media/slick.woff": "/rehobothhealthcarellc/static/media/slick.295183786cd8a1389865.woff",
+    "main.65e3ecf2.css.map": "/rehobothhealthcarellc/static/css/main.65e3ecf2.css.map",
+    "main.8240ba30.js.map": "/rehobothhealthcarellc/static/js/main.8240ba30.js.map",
+    "453.7ca7c9fa.chunk.js.map": "/rehobothhealthcarellc/static/js/453.7ca7c9fa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65e3ecf2.css",
+    "static/js/main.8240ba30.js"
+  ]
+}
